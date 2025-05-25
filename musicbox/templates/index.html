@@ -1,0 +1,11 @@
+<h1>Music Managing app</h1>
+<ul>
+{% for playlist in playlists %}
+    <li>{{ playlist.name }}</li>
+{% empty %}
+    <li>Sorry, no playlists added .</li>
+{% endfor %}
+</ul>
+
+If you want to add a playlist, click
+<a href="{% url 'create_playlist' %}">Add playlist</a>

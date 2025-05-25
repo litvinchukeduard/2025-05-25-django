@@ -1,0 +1,9 @@
+{{playlist.name}}
+
+<ul>
+{% for song in playlist.songs.all %}
+    <li>{{ song.title }}</li>
+{% empty %}
+    <li>Sorry, no Songs added .</li>
+{% endfor %}
+</ul>
